@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>More Callbacks</title>
+	<script>
+
+		// 1. Create a function called MainFunction.
+		// 2. Pass a callback function to the MainFunction (e.g. MainFunction(function() { console.log('hello world'); }))
+		// 3. Have the MainFunction execute a callback function.
+		// function MainFunction(func){
+		// 	func();
+		// }
+
+
+		// MainFunction(function(){
+		// 	 console.log('hello world'); 
+		// });
+
+		// 4. When the MainFunction executes a callback function, have the MainFunction pass a random number to the callback function.  Have the callback function console log this random number.  (in this challenge, you're practicing how the main function can pass something to the callback function)
+		// function MainFunction(func){
+		// 	var number = Math.random();
+		// 	func(number);
+		// }
+
+
+		// MainFunction(function(randomNumber){
+		// 	 console.log('Number '+randomNumber); 
+		// });
+
+
+		// 5. Change your MainFunction so that it actually passes not only a random number to the callback function but also a random string to the callback function.  In other words, the callback function needs to accept two parameters from the MainFunction: randomNumber and randomString.  (You can use Math.random().toString(36).slice(2) to generate a randomString).
+
+		// function MainFunction(func){
+		// 	var number = Math.random();
+		// 	var string = Math.random().toString(36).slice(2);
+		// 	alert(number);
+		// 	func(number, string);
+		// }
+
+
+		// MainFunction(function(randomNumber, randomString ){
+		// 	 console.log('Number '+randomNumber); 
+		// 	 console.log('String '+randomString); 
+		// });
+
+		// 6. Have the callback function return 777 and have the MainFunction retrieve this returned value from the callback function and alert this number.  (in this challenge, you're practicing how the callback function can pass something back to the main function)
+
+		function MainFunction(func){
+			alert(func());
+		}
+
+
+		MainFunction(function(){
+			var a = 777;
+			return(a);
+		});
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
